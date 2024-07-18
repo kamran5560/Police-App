@@ -33,18 +33,37 @@ class _SplashScreenState extends State<SplashScreen> {
             begin: Alignment.topCenter,
             end: Alignment(1, 1),
             colors: <Color>[
-              Color(0xff2500E0),
-              Color(0xffE31E33),
+              Color(0xff668cff),
+              Color(0xffff4d4d),
             ],
           ),
         ),
-        child:
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
             Center(
-              child: CircularProgressIndicator(
-                color: Colors.white,
-                strokeWidth: 4.0,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.white,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: Image.asset(
+                    'images/Swat-Police-Logo.png',
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
               ),
+            ),
+            SizedBox(height: 24),
+            CircularProgressIndicator(
+              color: Colors.white,
+              strokeWidth: 4.0,
             )
+          ],
+        )
+
 
       ),
     );

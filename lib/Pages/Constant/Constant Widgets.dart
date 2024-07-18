@@ -14,46 +14,23 @@ const BackGroundGradient = BoxDecoration(
 Widget Home_Screen_Card(String text, Function() onpress){
   return  GestureDetector(
     onTap: onpress,
-    child: Container(
-      height: 80,
+    child:
+    Container(
+      height: 120,
       width:  400,
-      // width: 200,
-      // decoration:  BoxDecoration(
-      //   borderRadius: BorderRadius.circular(20),
-      //   border: Border.all(
-      //     color: Colors.grey,
-      //     width: 3,
-      //   ),
-      //   boxShadow: [
-      //     BoxShadow(
-      //       color: Colors.grey.withOpacity(0.5),
-      //       spreadRadius: 5,
-      //       blurRadius: 7,
-      //       offset: Offset(0, 3), // changes position of shadow
-      //     ),
-      //   ],
-      //   gradient: LinearGradient(
-      //     begin: Alignment.topCenter,
-      //     end: Alignment(1, 1),
-      //     colors: <Color>[
-      //       Colors.blue,
-      //       Colors.red,
-      //     ],
-      //   ),
-      // ),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: Colors.grey,
-          width: 3,
+          width: 2,
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 7,
-            offset: Offset(0, 3), // changes position of shadow
+            color: Colors.grey.withOpacity(0.7),
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: Offset(0, 0),
           ),
         ],
       ),

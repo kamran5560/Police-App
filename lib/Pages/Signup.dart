@@ -1,35 +1,25 @@
 import 'package:flutter/material.dart';
-
 import 'Home Page.dart';
-import 'Signup.dart';
 
-class loginsreen extends StatefulWidget {
-  const loginsreen({Key? key}) : super(key: key);
-
+class signupsreen extends StatefulWidget {
+  const signupsreen({Key? key}) : super(key: key);
   @override
-  State<loginsreen> createState() => _loginsreenState();
+  State<signupsreen> createState() => _signupsreenState();
 }
 
-class _loginsreenState extends State<loginsreen> {
+class _signupsreenState extends State<signupsreen> {
+  TextEditingController F_Name = TextEditingController();
   TextEditingController CNIC = TextEditingController();
+  TextEditingController L_Name = TextEditingController();
   TextEditingController Password = TextEditingController();
+  TextEditingController Confirm_Password = TextEditingController();
   bool _obscureText = true;
 
-  // bool obsecure = false;
-  // final FirebaseAuth g_auth = FirebaseAuth.instance;
-  // final GoogleSignIn g_User = GoogleSignIn();
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    // bool _passwordInVisible = true;
     return Scaffold(
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   elevation: 0,
-      //   backgroundColor: Colors.transparent,
-      // ),
-      // backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 12,vertical: 24),
@@ -55,15 +45,18 @@ class _loginsreenState extends State<loginsreen> {
                 Padding(
                   padding:  EdgeInsets.only(top: 24,bottom: 16),
                   child: Text(
-                    'Sign In',
+                    'Sign Up your Account',
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 28,
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-                TextField_Design("Enter CNIC", CNIC),
+                TextField_Design("First Name","First Name", F_Name),
+                TextField_Design("Last Name","Last Name", L_Name),
+                TextField_Design("Enter CNIC","Enter CNIC", CNIC),
                 TextField_Design_pas("Enter Password", Password),
+                TextField_Design_pas("Confirm Password", Confirm_Password),
                 // ),
                 Center(
                   child: Container(
@@ -90,12 +83,12 @@ class _loginsreenState extends State<loginsreen> {
                         Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    signupsreen()));
+                                    Home_Page()));
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(horizontal: 80),
                         child: Text(
-                          'sing in ',
+                          'Done ',
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: width * 0.051,
@@ -115,25 +108,6 @@ class _loginsreenState extends State<loginsreen> {
                     ),
                   ),
                 ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have an account?",
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    ),
-                    SizedBox(width: 4),
-                    Text(
-                      "signup here",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.redAccent),
-                    ),
-                  ],
-                )
               ],
             ),
           ),
@@ -144,20 +118,19 @@ class _loginsreenState extends State<loginsreen> {
 
   Widget TextField_Design(
       String hint,
+      String lable,
       TextEditingController Controller,
       ) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Container(
       child: Container(
-        // width: width * 0.879,
-        // height: height * 0.148,
         margin: EdgeInsets.symmetric(vertical: 16),
         child: TextField(
           controller: Controller,
           textAlign: TextAlign.start,
           decoration: InputDecoration(
-            labelText: 'CNIC',
+            labelText: '$lable',
             hintText: "$hint",
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(4),
@@ -197,3 +170,4 @@ class _loginsreenState extends State<loginsreen> {
     );
   }
 }
+

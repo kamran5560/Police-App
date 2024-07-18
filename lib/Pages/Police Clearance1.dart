@@ -226,16 +226,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                         style: TextStyle(
                             fontWeight: FontWeight.w400, fontSize: 14),
                       ),
-                      Divider(
-                        color: Colors.black,
-                        // Color of the line
-                        thickness: 2,
-                        // Thickness of the line
-                        indent: 100,
-                        // Empty space to the leading edge of the divider.
-                        endIndent:
-                            0, // Empty space to the trailing edge of the divider.
-                      ),
+
                     ],
                   )
                 ],
@@ -260,16 +251,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                     'Police Station:',
                     style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
                   ),
-                  Divider(
-                    color: Colors.black,
-                    // Color of the line
-                    thickness: 2,
-                    // Thickness of the line
-                    indent: 100,
-                    // Empty space to the leading edge of the divider.
-                    endIndent:
-                        0, // Empty space to the trailing edge of the divider.
-                  ),
+        
                 ],
               ),
               SizedBox(height: 22),
