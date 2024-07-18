@@ -3,7 +3,8 @@ import 'Constant/Constant Widgets.dart';
 import 'Login Page.dart';
 import 'Nadra Verification.dart';
 import 'NawBar.dart';
-import 'Police Clearance.dart';
+import 'Police Clearance1.dart';
+import 'Police Clearance2.dart';
 import 'Renewal Form.dart';
 
 class Home_Page extends StatelessWidget {
@@ -84,7 +85,7 @@ class Home_Page extends StatelessWidget {
                     Home_Screen_Card("Police Clearance Certificate", () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              Police_Clearance()));
+                              Police_Clearance2()));
                     }),
                     SizedBox(height: 22),
                     Home_Screen_Card("Renewal Clearance Certificate", () {
