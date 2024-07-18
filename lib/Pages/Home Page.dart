@@ -19,8 +19,20 @@ class Home_Page extends StatelessWidget {
       key: scaffoldKey,
       drawer: Nav_Draw(),
       body: SafeArea(
-        child: Padding(
+        child: Container(
           padding: EdgeInsets.symmetric(horizontal: 16),
+          decoration:  BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment(1, 1),
+              colors: <Color>[
+                Color(0xff2500E0),
+                Color(0xffE31E33),
+
+              ],
+            ),
+          ),
+
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +46,7 @@ class Home_Page extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.notes_sharp,
-                        color: Colors.black,
+                        color: Colors.white,
                         size: 32,
                       ),
                     ),
@@ -58,7 +70,7 @@ class Home_Page extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.w600,
-                          color: Colors.black),
+                          color: Colors.white),
                     ),
                   ],
                 ),
@@ -72,7 +84,7 @@ class Home_Page extends StatelessWidget {
                           hintText: 'Search...',
                           prefixIcon: Icon(Icons.search),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            borderRadius: BorderRadius.all(Radius.circular(12),),
                           ),
                         ),
                       ),
@@ -91,7 +103,7 @@ class Home_Page extends StatelessWidget {
                     Home_Screen_Card("Renewal Clearance Certificate", () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              Renewal_Clearance()));
+                              Police_Clearance2()));
                     }),
                     SizedBox(height: 22),
                     Home_Screen_Card("Police Departmental Verification", () {}),
