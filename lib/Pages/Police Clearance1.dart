@@ -13,15 +13,23 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
     final _nameController = TextEditingController();
+    final _FnameController = TextEditingController();
+    final _cnicController = TextEditingController();
+    final _C_addressController = TextEditingController();
+    final _P_addressController = TextEditingController();
+    final _pasportController = TextEditingController();
     final _dobController = TextEditingController();
-    final _addressController = TextEditingController();
     final _contactController = TextEditingController();
 
     @override
     void dispose() {
       _nameController.dispose();
+      _FnameController.dispose();
+      _cnicController.dispose();
+      _C_addressController.dispose();
+      _P_addressController.dispose();
+      _pasportController.dispose();
       _dobController.dispose();
-      _addressController.dispose();
       _contactController.dispose();
       super.dispose();
     }
@@ -30,8 +38,12 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
       if (_formKey.currentState!.validate()) {
         // Process the form data
         String name = _nameController.text;
+        String Fname = _FnameController.text;
+        String cnic = _cnicController.text;
+        String Caddress = _C_addressController.text;
+        String Paddress = _P_addressController.text;
         String dob = _dobController.text;
-        String address = _addressController.text;
+        String address = _P_addressController.text;
         String contact = _contactController.text;
 
         // You can now use the collected data as needed
@@ -105,7 +117,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                 },
               ),
               TextFormField(
-                controller: _nameController,
+                controller: _FnameController,
                 decoration:
                     InputDecoration(labelText: '2. Father/Husband Name:'),
                 validator: (value) {
@@ -116,7 +128,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                 },
               ),
               TextFormField(
-                controller: _nameController,
+                controller: _cnicController,
                 decoration: InputDecoration(labelText: '3. CNIC No:'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -126,7 +138,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                 },
               ),
               TextFormField(
-                controller: _nameController,
+                controller: _dobController,
                 decoration: InputDecoration(labelText: '4. Date of Birth:'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -136,7 +148,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                 },
               ),
               TextFormField(
-                controller: _nameController,
+                controller: _C_addressController,
                 decoration: InputDecoration(labelText: '5. Current Address:'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -146,7 +158,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                 },
               ),
               TextFormField(
-                controller: _dobController,
+                controller: _P_addressController,
                 decoration: InputDecoration(labelText: '6. Permanent Address:'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -156,7 +168,7 @@ class _Police_Clearance1State extends State<Police_Clearance1> {
                 },
               ),
               TextFormField(
-                controller: _addressController,
+                controller: _pasportController,
                 decoration: InputDecoration(labelText: ' 7. Passport No:'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
