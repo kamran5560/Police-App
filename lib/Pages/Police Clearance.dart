@@ -12,7 +12,7 @@ class _Police_ClearanceState extends State<Police_Clearance> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Wellcom",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500,color: Colors.black),),
+        child: Text("New Changes",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500,color: Colors.black),),
       ),
     );
   }
